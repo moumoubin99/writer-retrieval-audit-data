@@ -1,0 +1,92 @@
+[
+  {
+    "method": "vicreg",
+    "amp": true,
+    "bs": 128,
+    "rep": 1,
+    "map": 0.027,
+    "logreg": 0.1,
+    "effrank": 11.18,
+    "secs": 4375.6
+  },
+  {
+    "method": "vicreg",
+    "amp": true,
+    "bs": 128,
+    "rep": 2,
+    "map": 0.027,
+    "logreg": 0.1,
+    "effrank": 11.18,
+    "secs": 4399.7
+  },
+  {
+    "method": "vicreg",
+    "amp": false,
+    "bs": 128,
+    "rep": 1,
+    "map": 0.127,
+    "logreg": 0.42,
+    "effrank": 40.35,
+    "secs": 4389.3
+  },
+  {
+    "method": "dino",
+    "amp": true,
+    "bs": 128,
+    "rep": 1,
+    "map": 0.0507,
+    "logreg": 0.09,
+    "effrank": 17.31,
+    "secs": 4418.1
+  },
+  {
+    "method": "dino",
+    "amp": true,
+    "bs": 128,
+    "rep": 2,
+    "map": 0.0507,
+    "logreg": 0.09,
+    "effrank": 17.31,
+    "secs": 4962.5
+  },
+  {
+    "method": "dino",
+    "amp": false,
+    "bs": 128,
+    "rep": 1,
+    "map": 0.0437,
+    "logreg": 0.1,
+    "effrank": 17.69,
+    "secs": 5990.8
+  },
+  {
+    "method": "mae",
+    "amp": true,
+    "bs": 128,
+    "rep": 1,
+    "map": 0.0564,
+    "logreg": 0.06,
+    "effrank": 29.69,
+    "secs": 4655.1
+  },
+  {
+    "method": "mae",
+    "amp": true,
+    "bs": 128,
+    "rep": 2,
+    "map": 0.0564,
+    "logreg": 0.06,
+    "effrank": 29.69,
+    "secs": 4673.1
+  },
+  {
+    "method": "mae",
+    "amp": false,
+    "bs": 128,
+    "rep": 1,
+    "map": 0.0623,
+    "logreg": 0.07,
+    "effrank": 29.69,
+    "secs": 4351.3
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "what": "Frozen ImageNet-pretrained ViT-S/16 (timm vit_small_patch16_224.augreg_in21k_ft_in1k) reference probe on COLOR Historical-WI, same page-level writer-retrieval mAP metric as the SSL comparison.",
+  "data": "Historical-WI training partition, colour images (1182 images)",
+  "n_writers": 100,
+  "n_pages": 300,
+  "crops_per_page": 24,
+  "seeds": 1,
+  "pretrained_vit_s16_imagenet_retrieval_mAP": 0.364,
+  "reference_points": {
+    "from_scratch_cjepa_mAP": 0.172,
+    "from_scratch_dino_mAP": 0.042,
+    "literature_sota_specialized_writerID_mAP": "0.66-0.76"
+  },
+  "caveat": "Single frozen-feature run (crops sampled with rng seed 0); reference calibration, not a comparative claim."
+}

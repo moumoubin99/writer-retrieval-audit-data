@@ -1,0 +1,103 @@
+{
+  "metric": "writer-retrieval leave-one-page-out mean average precision",
+  "source": {
+    "primary_sha256": "629a4236cbbe6850dedcd65198defc0f2ddbaca8e3fd948debc0a37b3071f397",
+    "pretrained_sha256": "9a3380672c3fe4fac37eff8a3968cd33ab9804ec3466e6f622f338b8aa563269"
+  },
+  "defect": "The evaluator sets self-similarity to negative infinity, sorts all M pages, and leaves the query label in the relevance vector. The query therefore contributes as a third relevant item at rank M and remains in the denominator.",
+  "protocol": {
+    "M_pages": 300,
+    "writers": 100,
+    "pages_per_writer": 3,
+    "R_relevant_other_pages": 2
+  },
+  "derivation": {
+    "general": "AP_loo = ((R+1) * AP_log - (R+1)/M) / R",
+    "instantiated": "AP_loo = 1.5 * AP_log - 0.005",
+    "standard_deviation": "SD_loo = 1.5 * SD_log",
+    "ranking": "The transform is strictly increasing, so every within-run method ordering is preserved.",
+    "rounding_note": "Archived mAP values have four decimal places. Corrected manuscript values are reported to three decimals."
+  },
+  "controlled_binarised": {
+    "I-JEPA": {
+      "logged_mean": 0.0491,
+      "logged_sd": 0.0065,
+      "corrected_mean": 0.06865,
+      "corrected_sd": 0.00975
+    },
+    "C-JEPA": {
+      "logged_mean": 0.1722,
+      "logged_sd": 0.0083,
+      "corrected_mean": 0.2533,
+      "corrected_sd": 0.01245
+    },
+    "MAE": {
+      "logged_mean": 0.0378,
+      "logged_sd": 0.0105,
+      "corrected_mean": 0.0517,
+      "corrected_sd": 0.01575
+    },
+    "VICReg": {
+      "logged_mean": 0.0749,
+      "logged_sd": 0.0445,
+      "corrected_mean": 0.10735,
+      "corrected_sd": 0.06675
+    },
+    "DINO": {
+      "logged_mean": 0.0424,
+      "logged_sd": 0.0049,
+      "corrected_mean": 0.0586,
+      "corrected_sd": 0.00735
+    }
+  },
+  "historical_colour": {
+    "execution_0a": {
+      "I-JEPA": 0.0595,
+      "C-JEPA": 0.19,
+      "MAE": 0.1675,
+      "VICReg": 0.1705,
+      "DINO": 0.2035
+    },
+    "execution_0b": {
+      "I-JEPA": 0.06025,
+      "C-JEPA": 0.0895,
+      "MAE": 0.082,
+      "VICReg": 0.0685,
+      "DINO": 0.0595
+    },
+    "execution_1": {
+      "I-JEPA": 0.058,
+      "C-JEPA": 0.1195,
+      "MAE": 0.0745,
+      "VICReg": 0.1075,
+      "DINO": 0.067
+    },
+    "execution_2": {
+      "I-JEPA": 0.091,
+      "C-JEPA": 0.1225,
+      "MAE": 0.07,
+      "VICReg": 0.0235,
+      "DINO": 0.0715
+    }
+  },
+  "precision_diagnostic": {
+    "VICReg": {
+      "AMP": 0.0355,
+      "fp32": 0.1855
+    },
+    "DINO": {
+      "AMP": 0.07105,
+      "fp32": 0.06055
+    },
+    "MAE": {
+      "AMP": 0.0796,
+      "fp32": 0.08845
+    }
+  },
+  "frozen_pretrained": {
+    "checkpoint": "vit_small_patch16_224.augreg_in21k_ft_in1k",
+    "logged": 0.364,
+    "corrected": 0.541,
+    "comparability": "orientation only; independent 24-crop multiscale sampler"
+  }
+}

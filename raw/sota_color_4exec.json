@@ -1,0 +1,121 @@
+{
+  "config": {
+    "data": "color/real-degradation",
+    "n_writers": 100,
+    "dim": 384,
+    "enc_depth": 8,
+    "steps": 6000,
+    "metric_primary": "retrieval-mAP",
+    "chance_mAP": 0.01,
+    "pretrained_vit_s16_calib_mAP": 0.364,
+    "literature_writerID_SOTA_mAP": "0.66-0.76"
+  },
+  "executions": {
+    "exec0a_seed0_A": {
+      "map": {
+        "jepa": 0.043,
+        "cjepa": 0.13,
+        "mae": 0.115,
+        "vicreg": 0.117,
+        "dino": 0.139
+      },
+      "effrank": {
+        "jepa": 8.9,
+        "cjepa": 151.6,
+        "mae": 72.6,
+        "vicreg": 88.6,
+        "dino": 170.6
+      }
+    },
+    "exec0b_seed0_B": {
+      "map": {
+        "jepa": 0.0435,
+        "cjepa": 0.063,
+        "mae": 0.058,
+        "vicreg": 0.049,
+        "dino": 0.043
+      },
+      "effrank": {
+        "jepa": 7.8,
+        "cjepa": 107.8,
+        "mae": 29.7,
+        "vicreg": 13.1,
+        "dino": 17.3
+      }
+    },
+    "exec1_seed1": {
+      "map": {
+        "jepa": 0.042,
+        "cjepa": 0.083,
+        "mae": 0.053,
+        "vicreg": 0.075,
+        "dino": 0.048
+      },
+      "effrank": {
+        "jepa": 16.5,
+        "cjepa": 222.7,
+        "mae": 17.3,
+        "vicreg": 6.6,
+        "dino": 24.2
+      }
+    },
+    "exec2_seed2": {
+      "map": {
+        "jepa": 0.064,
+        "cjepa": 0.085,
+        "mae": 0.05,
+        "vicreg": 0.019,
+        "dino": 0.051
+      },
+      "effrank": {
+        "jepa": 3.4,
+        "cjepa": 124.2,
+        "mae": 26.9,
+        "vicreg": 12.9,
+        "dino": 24.4
+      }
+    }
+  },
+  "summary_mAP": {
+    "_format": "[median, min, max] over the 4 executions",
+    "jepa": [
+      0.0435,
+      0.042,
+      0.064
+    ],
+    "cjepa": [
+      0.084,
+      0.063,
+      0.13
+    ],
+    "mae": [
+      0.0555,
+      0.05,
+      0.115
+    ],
+    "vicreg": [
+      0.062,
+      0.019,
+      0.117
+    ],
+    "dino": [
+      0.0495,
+      0.043,
+      0.139
+    ]
+  },
+  "low_rank_incidence": {
+    "_definition": "effrank < 30 counted as low-rank/collapsed; reported as OBSERVED k-of-4, not a probability estimate",
+    "jepa": "4/4 (always collapsed; effrank 3.4-16.5)",
+    "cjepa": "0/4 (never collapses; effrank 108-223 -- anti-collapse var/cov reg works as designed)",
+    "mae": "3/4 (effrank 17-73)",
+    "vicreg": "3/4 (effrank 6.6-89)",
+    "dino": "3/4 (effrank 17-171)"
+  },
+  "per_execution_mAP_winner": {
+    "exec0a_seed0_A": "dino (0.139)",
+    "exec0b_seed0_B": "cjepa (0.063)",
+    "exec1_seed1": "cjepa (0.083)",
+    "exec2_seed2": "cjepa (0.085)"
+  }
+}

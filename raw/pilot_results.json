@@ -1,0 +1,137 @@
+{
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "arms": {
+    "ijepa": {
+      "acc_mean_std": [
+        0.4271,
+        0.0128
+      ],
+      "acc_heavy_mean_std": [
+        0.3944,
+        0.0168
+      ],
+      "effrank_mean_std": [
+        77.8166,
+        0.5949
+      ],
+      "auc_info_mean_std": [
+        0.6594,
+        0.008
+      ],
+      "auc_pixelvar_mean_std": [
+        0.7922,
+        0.0
+      ],
+      "auc_random_mean_std": [
+        0.5016,
+        0.0064
+      ],
+      "info_pixelvar_spearman_mean_std": [
+        0.604,
+        0.0086
+      ],
+      "n_destroyed": 1491,
+      "n_tokens": 22132
+    },
+    "herit": {
+      "acc_mean_std": [
+        0.4264,
+        0.0103
+      ],
+      "acc_heavy_mean_std": [
+        0.3931,
+        0.0104
+      ],
+      "effrank_mean_std": [
+        77.711,
+        0.6255
+      ],
+      "auc_info_mean_std": [
+        0.6824,
+        0.0075
+      ],
+      "auc_pixelvar_mean_std": [
+        0.7922,
+        0.0
+      ],
+      "auc_random_mean_std": [
+        0.5016,
+        0.0064
+      ],
+      "info_pixelvar_spearman_mean_std": [
+        0.6413,
+        0.0108
+      ],
+      "n_destroyed": 1491,
+      "n_tokens": 22132
+    },
+    "pixelvar_gate": {
+      "acc_mean_std": [
+        0.4604,
+        0.0212
+      ],
+      "acc_heavy_mean_std": [
+        0.4319,
+        0.0199
+      ],
+      "effrank_mean_std": [
+        75.1868,
+        0.7449
+      ],
+      "auc_info_mean_std": [
+        0.6597,
+        0.0087
+      ],
+      "auc_pixelvar_mean_std": [
+        0.7922,
+        0.0
+      ],
+      "auc_random_mean_std": [
+        0.5016,
+        0.0064
+      ],
+      "info_pixelvar_spearman_mean_std": [
+        0.605,
+        0.0094
+      ],
+      "n_destroyed": 1491,
+      "n_tokens": 22132
+    },
+    "random_gate": {
+      "acc_mean_std": [
+        0.425,
+        0.0112
+      ],
+      "acc_heavy_mean_std": [
+        0.3931,
+        0.0161
+      ],
+      "effrank_mean_std": [
+        77.8935,
+        0.6327
+      ],
+      "auc_info_mean_std": [
+        0.6594,
+        0.008
+      ],
+      "auc_pixelvar_mean_std": [
+        0.7922,
+        0.0
+      ],
+      "auc_random_mean_std": [
+        0.5016,
+        0.0064
+      ],
+      "info_pixelvar_spearman_mean_std": [
+        0.604,
+        0.0086
+      ],
+      "n_destroyed": 1491,
+      "n_tokens": 22132
+    }
+  }
+}
